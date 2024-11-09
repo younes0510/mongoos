@@ -53,7 +53,7 @@ const removeById = (personId) => {
 
 
 const removeManyPeople = () => {
-    return Person.deleteMany({name:"Mary"})
+    return Person.deleteMany({name:"Maria"})
 }
 
 

@@ -5,23 +5,23 @@ const personController = require('./controllers/personController');
 
 
 
-async function exec_checkpoint_methods() {
+async function persons() {
   try {
    
     const person = await personController.create({
-      name: "John Doe",
-      age: 25,
-      favoriteFoods: ["pizza", "pasta"]
+      name: "younes",
+      age: 21,
+      favoriteFoods: ["pizza", "tacos"]
     });
 
     
     const manyPeople = await personController.createPeople([
-      { name: "Mary", age: 27, favoriteFoods: ["burrito"] },
-      { name: "Jane", age: 29, favoriteFoods: ["burrito", "tacos"] }
+      { name: "Maria", age: 27, favoriteFoods: ["burrito"] },
+      { name: "aymen", age: 29, favoriteFoods: ["burrito", "chawarma"] }
     ]);
 
    
-    const maryPeople = await personController.findPeopelByName("Mary");
+    const maryPeople = await personController.findPeopelByName("Maria");
 
    
     const Burrito = await personController.searchBurritos();
@@ -32,7 +32,7 @@ async function exec_checkpoint_methods() {
   }
 }
 
-exec_checkpoint_methods(); 
+persons(); 
 
 
 
